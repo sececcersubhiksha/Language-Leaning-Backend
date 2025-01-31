@@ -11,12 +11,9 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-    .connect("mongodb://localhost:27017/LanguageLearning", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    .then(() => console.log("Connected to database"))
-    .catch((err) => console.error("Database connection error:", err));
+    .connect("mongodb+srv://rsubhiksha:rsubhi123@cluster0.xpty3.mongodb.net/LanguageLearning")
+        .then(() => console.log("Connected to database"))
+        .catch((err) => console.error("Database connection error:", err));
 
 // User Schema & Model
 const userSchema = new mongoose.Schema({
